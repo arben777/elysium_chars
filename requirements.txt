@@ -19,7 +19,7 @@ httpx
 ipywidgets
 langchain>=0.0.240
 llama_index
-multion
+multion 0.2.2
 psycopg2-binary
 pyaudio
 pydantic
