@@ -1,8 +1,6 @@
-
 import React, { useState, useEffect } from 'react';
 import Avatar from '@mui/material/Avatar'; // For displaying avatars
 import { useNavigate, useLocation } from 'react-router-dom';
-import axios from 'axios'; // For making API calls
 
 const TeamChat = ({ 
   // Props from Conversation component
@@ -19,10 +17,11 @@ const TeamChat = ({
 
   // Fetch executive team members from the /characters API endpoint
   useEffect(() => {
-    axios.get('/characters')
-      .then(response => {
+    fetch('/characters')
+      .then(response => response.json())
+      .then(data => {
         // Assuming the API returns a list of characters and you can filter executive members by a certain role or tag
-        const fetchedExecutives = response.data.filter(character => character.role === 'executive');
+        const fetchedExecutives = data.filter(character => character.role === 'executive');
         setExecutives(fetchedExecutives);
       })
       .catch(error => {
