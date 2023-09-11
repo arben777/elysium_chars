@@ -24,7 +24,6 @@ import Privacy from './pages/Privacy';
 import Support from './pages/Support';
 import TeamChat from './pages/TeamChat';
 
-
 // utils
 import auth from './utils/firebase';
 
