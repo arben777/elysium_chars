@@ -22,6 +22,8 @@ import CharCreate from './pages/CharCreate';
 import CharDelete from './pages/CharDelete';
 import Privacy from './pages/Privacy';
 import Support from './pages/Support';
+import TeamChat from './pages/TeamChat';
+
 
 // utils
 import auth from './utils/firebase';
@@ -429,6 +431,7 @@ const App = () => {
           />
           <Route path='/privacy' element={<Privacy />} />
           <Route path='/support' element={<Support />} />
+          <Route path='/team-chat' element={<TeamChat />} />
         </Routes>
 
         <Footer />
